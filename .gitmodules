@@ -1,6 +1,6 @@
 [submodule "backend"]
 	path = backend
-	url = https://github.com/sheng153/backend_meteorologia
+	url = https://github.com/grupo-meteorologia/backend_meteorologia
 [submodule "frontend"]
 	path = frontend
-	url = https://github.com/sheng153/frontend_meteorologia
+	url = https://github.com/grupo-meteorologia/frontend_meteorologia
