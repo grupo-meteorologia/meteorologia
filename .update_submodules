@@ -17,4 +17,16 @@ fi
 echo "🚀 Pulling latest main"
 git submodule update --remote --merge --recursive
 
+echo
+echo "📝 Checking submodule pointers"
+if git diff --quiet; then
+  echo "→ No pointer changes to commit."
+else
+  echo "→ Committing submodule pointer updates"
+  git add .
+  git commit -m "chore: update submodule pointers"
+  echo "→ Pushing parent repo to origin/main"
+  git push origin main
+fi
+
 echo "🎉 All submodules up to date!"
