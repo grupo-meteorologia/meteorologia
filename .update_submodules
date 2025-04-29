@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+JOBS=${1:-4}
+DEPTH=${2:-0}
+
+echo "🔄 Sync submodule URL"
+git submodule sync --recursive
+
+echo "📦 Updating submodules"
+if (( DEPTH > 0 )); then
+  git submodule update --init --recursive --jobs "$JOBS" --depth "$DEPTH"
+else
+  git submodule update --init --recursive --jobs "$JOBS"
+fi
+
+echo "🚀 Pulling latest main"
+git submodule update --remote --merge --recursive
+
+echo "🎉 All submodules up to date!"
