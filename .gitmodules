@@ -1,8 +1,8 @@
 [submodule "backend"]
 	path = backend
-	url = https://github.com/grupo-meteorologia/backend_meteorologia
+    url = git@github.com:grupo-meteorologia/backend_meteorologia.git 
     branch = main
 [submodule "frontend"]
 	path = frontend
-	url = https://github.com/grupo-meteorologia/frontend_meteorologia
+	url = git@github.com:grupo-meteorologia/frontend_meteorologia.git
     branch = main
