@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_0',['main',['../server_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'server.c']]]
+  ['idx_0',['idx',['../structcbdata.html#a821b31ccf5ccbbac335ee745585320b5',1,'cbdata']]]
 ];

@@ -26,6 +26,21 @@ var NAVTREE =
 [
   [ "My Project", "index.html", [
     [ "README", "md_README.html", null ],
+    [ "Namespaces", "namespaces.html", [
+      [ "Namespace List", "namespaces.html", "namespaces_dup" ],
+      [ "Namespace Members", "namespacemembers.html", [
+        [ "All", "namespacemembers.html", null ],
+        [ "Functions", "namespacemembers_func.html", null ]
+      ] ]
+    ] ],
+    [ "Classes", "annotated.html", [
+      [ "Class List", "annotated.html", "annotated_dup" ],
+      [ "Class Index", "classes.html", null ],
+      [ "Class Members", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Variables", "functions_vars.html", null ]
+      ] ]
+    ] ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
@@ -40,7 +55,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"dir_d37db86729b3c52d1eb9f8b04d23ffa6.html"
+"annotated.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

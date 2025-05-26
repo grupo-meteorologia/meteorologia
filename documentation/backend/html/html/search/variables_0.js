@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['url_0',['url',['../server_8c.html#aa17d90c14d0c078683834a82aa3ed2e3',1,'server.c']]]
+  ['idx_0',['idx',['../structcbdata.html#a821b31ccf5ccbbac335ee745585320b5',1,'cbdata']]]
 ];
