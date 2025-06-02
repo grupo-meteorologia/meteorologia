@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['nc_5fget_5fsubset_5fas_5fjson_0',['nc_get_subset_as_json',['../parser_8c.html#ab75833efc9809aa1282abc580b862f82',1,'parser.c']]],
-  ['now_1',['now',['../structprogress.html#a07e2f25393c63b7d8de0a21b7093db62',1,'progress']]],
-  ['num_5ffiles_2',['NUM_FILES',['../fetcher_8h.html#a7e72e0268904c2467ce256cc0f78925c',1,'fetcher.h']]]
+  ['gcm_5fauth_5ffailure_0',['GCM_AUTH_FAILURE',['../mongoose_8h.html#a3e3d7470e994c1f962584ad4fc2af488',1,'mongoose.h']]],
+  ['generate_5fkeys_1',['generate_keys',['../fetcher_8c.html#a18aaef93079280c57cf858832184b302',1,'generate_keys(const struct tm *run, int offset[NUM_FILES], char keys[NUM_FILES][MAX_URL]):&#160;fetcher.c'],['../fetcher_8h.html#a18aaef93079280c57cf858832184b302',1,'generate_keys(const struct tm *run, int offset[NUM_FILES], char keys[NUM_FILES][MAX_URL]):&#160;fetcher.c']]]
 ];

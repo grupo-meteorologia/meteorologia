@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: lib_api/fetcher.c File Reference</title>
+<title>My Project: ingestor/fetcher.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -109,8 +109,7 @@ $(function(){initNavTree('fetcher_8c.html',''); initResizable(true); });
   <div class="headertitle"><div class="title">fetcher.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="fetcher_8h_source.html">./fetcher.h</a>&quot;</code><br />
-<code>#include &lt;curl/system.h&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="fetcher_8h_source.html">fetcher.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -121,26 +120,32 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a88989790257affffb02ca7cfa3517d3b" id="r_a88989790257affffb02ca7cfa3517d3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88989790257affffb02ca7cfa3517d3b">redraw_bars</a> ()</td></tr>
-<tr class="separator:a88989790257affffb02ca7cfa3517d3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a97e9cf50b9689b134898578c3cffb406" id="r_a97e9cf50b9689b134898578c3cffb406"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97e9cf50b9689b134898578c3cffb406">download_parallel</a> (const char keys[<a class="el" href="fetcher_8h.html#a7e72e0268904c2467ce256cc0f78925c">NUM_FILES</a>][<a class="el" href="fetcher_8h.html#afcbf7727d6416354930cd43f1c1e480c">MAX_URL</a>])</td></tr>
+<tr class="memitem:a2b84ffc848eb76be4341aa18b699e059" id="r_a2b84ffc848eb76be4341aa18b699e059"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b84ffc848eb76be4341aa18b699e059">fetch_current_conditions</a> (double lat, double lon, char *out_path, size_t out_path_size)</td></tr>
+<tr class="separator:a2b84ffc848eb76be4341aa18b699e059"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aef334801630cffa4f694259497e10bc3" id="r_aef334801630cffa4f694259497e10bc3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aef334801630cffa4f694259497e10bc3">find_latest_run</a> (struct tm *out)</td></tr>
+<tr class="separator:aef334801630cffa4f694259497e10bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18aaef93079280c57cf858832184b302" id="r_a18aaef93079280c57cf858832184b302"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18aaef93079280c57cf858832184b302">generate_keys</a> (const struct tm *run, int offset[<a class="el" href="constants_8h.html#a7e72e0268904c2467ce256cc0f78925c">NUM_FILES</a>], char keys[<a class="el" href="constants_8h.html#a7e72e0268904c2467ce256cc0f78925c">NUM_FILES</a>][<a class="el" href="constants_8h.html#afcbf7727d6416354930cd43f1c1e480c">MAX_URL</a>])</td></tr>
+<tr class="separator:a18aaef93079280c57cf858832184b302"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a370c187a72a3eb6b1f72d772bd0de4a6" id="r_a370c187a72a3eb6b1f72d772bd0de4a6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a370c187a72a3eb6b1f72d772bd0de4a6">run_already_downloaded</a> (struct tm *run_tm)</td></tr>
+<tr class="separator:a370c187a72a3eb6b1f72d772bd0de4a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97e9cf50b9689b134898578c3cffb406" id="r_a97e9cf50b9689b134898578c3cffb406"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97e9cf50b9689b134898578c3cffb406">download_parallel</a> (const char keys[<a class="el" href="constants_8h.html#a7e72e0268904c2467ce256cc0f78925c">NUM_FILES</a>][<a class="el" href="constants_8h.html#afcbf7727d6416354930cd43f1c1e480c">MAX_URL</a>])</td></tr>
 <tr class="separator:a97e9cf50b9689b134898578c3cffb406"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cac288e7acfe1728d2fcfeb4a16dbb6" id="r_a4cac288e7acfe1728d2fcfeb4a16dbb6"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cac288e7acfe1728d2fcfeb4a16dbb6">construct_file_name</a> (const char *key, char url[<a class="el" href="fetcher_8h.html#afcbf7727d6416354930cd43f1c1e480c">MAX_URL</a>], char outpath[<a class="el" href="fetcher_8h.html#afcbf7727d6416354930cd43f1c1e480c">MAX_URL</a>])</td></tr>
+<tr class="memitem:a4cac288e7acfe1728d2fcfeb4a16dbb6" id="r_a4cac288e7acfe1728d2fcfeb4a16dbb6"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cac288e7acfe1728d2fcfeb4a16dbb6">construct_file_name</a> (const char *key, char <a class="el" href="structurl.html">url</a>[<a class="el" href="constants_8h.html#afcbf7727d6416354930cd43f1c1e480c">MAX_URL</a>], char outpath[<a class="el" href="constants_8h.html#afcbf7727d6416354930cd43f1c1e480c">MAX_URL</a>])</td></tr>
 <tr class="separator:a4cac288e7acfe1728d2fcfeb4a16dbb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18bb0829e0e1490bce60cd20fb77d87f" id="r_a18bb0829e0e1490bce60cd20fb77d87f"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18bb0829e0e1490bce60cd20fb77d87f">check_time</a> (FILE **file, char outpath[<a class="el" href="fetcher_8h.html#afcbf7727d6416354930cd43f1c1e480c">MAX_URL</a>])</td></tr>
+<tr class="memitem:a18bb0829e0e1490bce60cd20fb77d87f" id="r_a18bb0829e0e1490bce60cd20fb77d87f"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18bb0829e0e1490bce60cd20fb77d87f">check_time</a> (FILE **file, char outpath[<a class="el" href="constants_8h.html#afcbf7727d6416354930cd43f1c1e480c">MAX_URL</a>])</td></tr>
 <tr class="separator:a18bb0829e0e1490bce60cd20fb77d87f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54b4f6e42a7092e6568561f848b0d28c" id="r_a54b4f6e42a7092e6568561f848b0d28c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54b4f6e42a7092e6568561f848b0d28c">multi_perform</a> (CURLM *multi)</td></tr>
 <tr class="separator:a54b4f6e42a7092e6568561f848b0d28c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7c77e2145eeb16934502df9b045a0e41" id="r_a7c77e2145eeb16934502df9b045a0e41"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c77e2145eeb16934502df9b045a0e41">check_response</a> (CURL *handle, char outpath[<a class="el" href="fetcher_8h.html#afcbf7727d6416354930cd43f1c1e480c">MAX_URL</a>], FILE *file)</td></tr>
+<tr class="memitem:a7c77e2145eeb16934502df9b045a0e41" id="r_a7c77e2145eeb16934502df9b045a0e41"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c77e2145eeb16934502df9b045a0e41">check_response</a> (CURL *handle, char outpath[<a class="el" href="constants_8h.html#afcbf7727d6416354930cd43f1c1e480c">MAX_URL</a>], FILE *file)</td></tr>
 <tr class="separator:a7c77e2145eeb16934502df9b045a0e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2412f6b208a4be3383b4955699e31682" id="r_a2412f6b208a4be3383b4955699e31682"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2412f6b208a4be3383b4955699e31682">set_master</a> ()</td></tr>
 <tr class="separator:a2412f6b208a4be3383b4955699e31682"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a840291bc02cba5474a4cb46a9b9566fe" id="r_a840291bc02cba5474a4cb46a9b9566fe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a840291bc02cba5474a4cb46a9b9566fe">main</a> (void)</td></tr>
-<tr class="separator:a840291bc02cba5474a4cb46a9b9566fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:a1ede12d9f404a3e1d653a6dab5342864" id="r_a1ede12d9f404a3e1d653a6dab5342864"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structprogress.html">progress</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ede12d9f404a3e1d653a6dab5342864">progs</a> [<a class="el" href="fetcher_8h.html#a7e72e0268904c2467ce256cc0f78925c">NUM_FILES</a>]</td></tr>
+<tr class="memitem:a2e0775733c760761edc48cc736ee03df" id="r_a2e0775733c760761edc48cc736ee03df"><td class="memItemLeft" align="right" valign="top">CURL *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e0775733c760761edc48cc736ee03df">master</a> = NULL</td></tr>
+<tr class="separator:a2e0775733c760761edc48cc736ee03df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1ede12d9f404a3e1d653a6dab5342864" id="r_a1ede12d9f404a3e1d653a6dab5342864"><td class="memItemLeft" align="right" valign="top">struct <a class="el" href="structprogress.html">progress</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1ede12d9f404a3e1d653a6dab5342864">progs</a> [<a class="el" href="constants_8h.html#a7e72e0268904c2467ce256cc0f78925c">NUM_FILES</a>]</td></tr>
 <tr class="separator:a1ede12d9f404a3e1d653a6dab5342864"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -234,17 +239,74 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a840291bc02cba5474a4cb46a9b9566fe" name="a840291bc02cba5474a4cb46a9b9566fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a840291bc02cba5474a4cb46a9b9566fe">&#9670;&#160;</a></span>main()</h2>
+<a id="a2b84ffc848eb76be4341aa18b699e059" name="a2b84ffc848eb76be4341aa18b699e059"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b84ffc848eb76be4341aa18b699e059">&#9670;&#160;</a></span>fetch_current_conditions()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int main </td>
+          <td class="memname">int fetch_current_conditions </td>
           <td>(</td>
-          <td class="paramtype">void</td>          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>lat</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>lon</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>out_path</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t</td>          <td class="paramname"><span class="paramname"><em>out_path_size</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aef334801630cffa4f694259497e10bc3" name="aef334801630cffa4f694259497e10bc3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aef334801630cffa4f694259497e10bc3">&#9670;&#160;</a></span>find_latest_run()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int find_latest_run </td>
+          <td>(</td>
+          <td class="paramtype">struct tm *</td>          <td class="paramname"><span class="paramname"><em>out</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a18aaef93079280c57cf858832184b302" name="a18aaef93079280c57cf858832184b302"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18aaef93079280c57cf858832184b302">&#9670;&#160;</a></span>generate_keys()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void generate_keys </td>
+          <td>(</td>
+          <td class="paramtype">const struct tm *</td>          <td class="paramname"><span class="paramname"><em>run</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>offset</em></span>[NUM_FILES], </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>keys</em></span>[NUM_FILES][MAX_URL]&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -268,16 +330,16 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a88989790257affffb02ca7cfa3517d3b" name="a88989790257affffb02ca7cfa3517d3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a88989790257affffb02ca7cfa3517d3b">&#9670;&#160;</a></span>redraw_bars()</h2>
+<a id="a370c187a72a3eb6b1f72d772bd0de4a6" name="a370c187a72a3eb6b1f72d772bd0de4a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a370c187a72a3eb6b1f72d772bd0de4a6">&#9670;&#160;</a></span>run_already_downloaded()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void redraw_bars </td>
+          <td class="memname">bool run_already_downloaded </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">struct tm *</td>          <td class="paramname"><span class="paramname"><em>run_tm</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -303,6 +365,20 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="a2e0775733c760761edc48cc736ee03df" name="a2e0775733c760761edc48cc736ee03df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e0775733c760761edc48cc736ee03df">&#9670;&#160;</a></span>master</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">CURL* master = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a1ede12d9f404a3e1d653a6dab5342864" name="a1ede12d9f404a3e1d653a6dab5342864"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1ede12d9f404a3e1d653a6dab5342864">&#9670;&#160;</a></span>progs</h2>
 
@@ -310,7 +386,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">struct <a class="el" href="structprogress.html">progress</a> progs[<a class="el" href="fetcher_8h.html#a7e72e0268904c2467ce256cc0f78925c">NUM_FILES</a>]</td>
+          <td class="memname">struct <a class="el" href="structprogress.html">progress</a> progs[<a class="el" href="constants_8h.html#a7e72e0268904c2467ce256cc0f78925c">NUM_FILES</a>]</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -322,7 +398,7 @@ Variables</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d37db86729b3c52d1eb9f8b04d23ffa6.html">lib_api</a></li><li class="navelem"><a class="el" href="fetcher_8c.html">fetcher.c</a></li>
+    <li class="navelem"><a class="el" href="dir_ccd6446bd958cbbab120e247100ae745.html">ingestor</a></li><li class="navelem"><a class="el" href="fetcher_8c.html">fetcher.c</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

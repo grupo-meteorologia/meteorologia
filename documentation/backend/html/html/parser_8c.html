@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: lib_api/parser.c File Reference</title>
+<title>My Project: ingestor/parser.c File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -103,92 +103,59 @@ $(function(){initNavTree('parser_8c.html',''); initResizable(true); });
 
 <div class="header">
   <div class="summary">
-<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">parser.c File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
-<code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &lt;string.h&gt;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="parser_8h_source.html">parser.h</a>&quot;</code><br />
+<code>#include &lt;sqlite3.h&gt;</code><br />
+<code>#include &lt;stdio.h&gt;</code><br />
 </div><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
-Macros</h2></td></tr>
-<tr class="memitem:a4728ff1b44b0ff0d06b2758a6c2da893" id="r_a4728ff1b44b0ff0d06b2758a6c2da893"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4728ff1b44b0ff0d06b2758a6c2da893">RAW_DIR</a>&#160;&#160;&#160;&quot;data/raw/&quot;</td></tr>
-<tr class="separator:a4728ff1b44b0ff0d06b2758a6c2da893"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9462efe4805ef4302a2fd001f72e4a38" id="r_a9462efe4805ef4302a2fd001f72e4a38"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9462efe4805ef4302a2fd001f72e4a38">JSON_DIR</a>&#160;&#160;&#160;&quot;data/json&quot;</td></tr>
-<tr class="separator:a9462efe4805ef4302a2fd001f72e4a38"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ab75833efc9809aa1282abc580b862f82" id="r_ab75833efc9809aa1282abc580b862f82"><td class="memItemLeft" align="right" valign="top">FILE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab75833efc9809aa1282abc580b862f82">nc_get_subset_as_json</a> (char *inname, char *outname, float lon0, float lon1, float lat0, float lat1)</td></tr>
-<tr class="separator:ab75833efc9809aa1282abc580b862f82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9237e1129f82bb9e422913efccaf0903" id="r_a9237e1129f82bb9e422913efccaf0903"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9237e1129f82bb9e422913efccaf0903">round_value</a> (double value)</td></tr>
+<tr class="separator:a9237e1129f82bb9e422913efccaf0903"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7acc05e668c11b94544574e5eb358727" id="r_a7acc05e668c11b94544574e5eb358727"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7acc05e668c11b94544574e5eb358727">call_parse_and_store</a> (const char *timestamp, double lat, double lon)</td></tr>
+<tr class="separator:a7acc05e668c11b94544574e5eb358727"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Macro Definition Documentation</h2>
-<a id="a9462efe4805ef4302a2fd001f72e4a38" name="a9462efe4805ef4302a2fd001f72e4a38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9462efe4805ef4302a2fd001f72e4a38">&#9670;&#160;</a></span>JSON_DIR</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define JSON_DIR&#160;&#160;&#160;&quot;data/json&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a4728ff1b44b0ff0d06b2758a6c2da893" name="a4728ff1b44b0ff0d06b2758a6c2da893"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4728ff1b44b0ff0d06b2758a6c2da893">&#9670;&#160;</a></span>RAW_DIR</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define RAW_DIR&#160;&#160;&#160;&quot;data/raw/&quot;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="ab75833efc9809aa1282abc580b862f82" name="ab75833efc9809aa1282abc580b862f82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab75833efc9809aa1282abc580b862f82">&#9670;&#160;</a></span>nc_get_subset_as_json()</h2>
+<a id="a7acc05e668c11b94544574e5eb358727" name="a7acc05e668c11b94544574e5eb358727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7acc05e668c11b94544574e5eb358727">&#9670;&#160;</a></span>call_parse_and_store()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">FILE * nc_get_subset_as_json </td>
+          <td class="memname">int call_parse_and_store </td>
           <td>(</td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>inname</em></span>, </td>
+          <td class="paramtype">const char *</td>          <td class="paramname"><span class="paramname"><em>timestamp</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>outname</em></span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>lat</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>lon0</em></span>, </td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>lon</em></span>&#160;)</td>
         </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9237e1129f82bb9e422913efccaf0903" name="a9237e1129f82bb9e422913efccaf0903"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9237e1129f82bb9e422913efccaf0903">&#9670;&#160;</a></span>round_value()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
         <tr>
-          <td class="paramkey"></td>
+          <td class="memname">double round_value </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>value</em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>lon1</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>lat0</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>lat1</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -200,7 +167,7 @@ Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="dir_d37db86729b3c52d1eb9f8b04d23ffa6.html">lib_api</a></li><li class="navelem"><a class="el" href="parser_8c.html">parser.c</a></li>
+    <li class="navelem"><a class="el" href="dir_ccd6446bd958cbbab120e247100ae745.html">ingestor</a></li><li class="navelem"><a class="el" href="parser_8c.html">parser.c</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
   </ul>
 </div>

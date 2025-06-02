@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['raw_5fdir_0',['RAW_DIR',['../fetcher_8h.html#a4728ff1b44b0ff0d06b2758a6c2da893',1,'RAW_DIR:&#160;fetcher.h'],['../parser_8c.html#a4728ff1b44b0ff0d06b2758a6c2da893',1,'RAW_DIR:&#160;parser.c']]]
+  ['db_5fpath_0',['DB_PATH',['../constants_8h.html#a0670e0e3546fcd815d007fe1aeff321e',1,'DB_PATH:&#160;constants.h'],['../main_8h.html#a0670e0e3546fcd815d007fe1aeff321e',1,'DB_PATH:&#160;main.h']]]
 ];

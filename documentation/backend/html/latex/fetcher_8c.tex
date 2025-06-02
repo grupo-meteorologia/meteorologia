@@ -1,7 +1,6 @@
-\doxysection{lib\+\_\+api/fetcher.c File Reference}
-\hypertarget{fetcher_8c}{}\label{fetcher_8c}\index{lib\_api/fetcher.c@{lib\_api/fetcher.c}}
-{\ttfamily \#include "{}./fetcher.\+h"{}}\newline
-{\ttfamily \#include $<$curl/system.\+h$>$}\newline
+\doxysection{ingestor/fetcher.c File Reference}
+\hypertarget{fetcher_8c}{}\label{fetcher_8c}\index{ingestor/fetcher.c@{ingestor/fetcher.c}}
+{\ttfamily \#include "{}fetcher.\+h"{}}\newline
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -12,26 +11,32 @@ struct \mbox{\hyperlink{structcbdata}{cbdata}}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{fetcher_8c_a88989790257affffb02ca7cfa3517d3b}{redraw\+\_\+bars}} ()
+int \mbox{\hyperlink{fetcher_8c_a2b84ffc848eb76be4341aa18b699e059}{fetch\+\_\+current\+\_\+conditions}} (double lat, double lon, char \texorpdfstring{$\ast$}{*}out\+\_\+path, size\+\_\+t out\+\_\+path\+\_\+size)
 \item 
-int \mbox{\hyperlink{fetcher_8c_a97e9cf50b9689b134898578c3cffb406}{download\+\_\+parallel}} (const char keys\mbox{[}\mbox{\hyperlink{fetcher_8h_a7e72e0268904c2467ce256cc0f78925c}{NUM\+\_\+\+FILES}}\mbox{]}\mbox{[}\mbox{\hyperlink{fetcher_8h_afcbf7727d6416354930cd43f1c1e480c}{MAX\+\_\+\+URL}}\mbox{]})
+int \mbox{\hyperlink{fetcher_8c_aef334801630cffa4f694259497e10bc3}{find\+\_\+latest\+\_\+run}} (struct tm \texorpdfstring{$\ast$}{*}out)
 \item 
-const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{fetcher_8c_a4cac288e7acfe1728d2fcfeb4a16dbb6}{construct\+\_\+file\+\_\+name}} (const char \texorpdfstring{$\ast$}{*}key, char url\mbox{[}\mbox{\hyperlink{fetcher_8h_afcbf7727d6416354930cd43f1c1e480c}{MAX\+\_\+\+URL}}\mbox{]}, char outpath\mbox{[}\mbox{\hyperlink{fetcher_8h_afcbf7727d6416354930cd43f1c1e480c}{MAX\+\_\+\+URL}}\mbox{]})
+void \mbox{\hyperlink{fetcher_8c_a18aaef93079280c57cf858832184b302}{generate\+\_\+keys}} (const struct tm \texorpdfstring{$\ast$}{*}run, int offset\mbox{[}\mbox{\hyperlink{constants_8h_a7e72e0268904c2467ce256cc0f78925c}{NUM\+\_\+\+FILES}}\mbox{]}, char keys\mbox{[}\mbox{\hyperlink{constants_8h_a7e72e0268904c2467ce256cc0f78925c}{NUM\+\_\+\+FILES}}\mbox{]}\mbox{[}\mbox{\hyperlink{constants_8h_afcbf7727d6416354930cd43f1c1e480c}{MAX\+\_\+\+URL}}\mbox{]})
 \item 
-void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{fetcher_8c_a18bb0829e0e1490bce60cd20fb77d87f}{check\+\_\+time}} (FILE \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}file, char outpath\mbox{[}\mbox{\hyperlink{fetcher_8h_afcbf7727d6416354930cd43f1c1e480c}{MAX\+\_\+\+URL}}\mbox{]})
+bool \mbox{\hyperlink{fetcher_8c_a370c187a72a3eb6b1f72d772bd0de4a6}{run\+\_\+already\+\_\+downloaded}} (struct tm \texorpdfstring{$\ast$}{*}run\+\_\+tm)
+\item 
+int \mbox{\hyperlink{fetcher_8c_a97e9cf50b9689b134898578c3cffb406}{download\+\_\+parallel}} (const char keys\mbox{[}\mbox{\hyperlink{constants_8h_a7e72e0268904c2467ce256cc0f78925c}{NUM\+\_\+\+FILES}}\mbox{]}\mbox{[}\mbox{\hyperlink{constants_8h_afcbf7727d6416354930cd43f1c1e480c}{MAX\+\_\+\+URL}}\mbox{]})
+\item 
+const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{fetcher_8c_a4cac288e7acfe1728d2fcfeb4a16dbb6}{construct\+\_\+file\+\_\+name}} (const char \texorpdfstring{$\ast$}{*}key, char \mbox{\hyperlink{structurl}{url}}\mbox{[}\mbox{\hyperlink{constants_8h_afcbf7727d6416354930cd43f1c1e480c}{MAX\+\_\+\+URL}}\mbox{]}, char outpath\mbox{[}\mbox{\hyperlink{constants_8h_afcbf7727d6416354930cd43f1c1e480c}{MAX\+\_\+\+URL}}\mbox{]})
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{fetcher_8c_a18bb0829e0e1490bce60cd20fb77d87f}{check\+\_\+time}} (FILE \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}file, char outpath\mbox{[}\mbox{\hyperlink{constants_8h_afcbf7727d6416354930cd43f1c1e480c}{MAX\+\_\+\+URL}}\mbox{]})
 \item 
 void \mbox{\hyperlink{fetcher_8c_a54b4f6e42a7092e6568561f848b0d28c}{multi\+\_\+perform}} (CURLM \texorpdfstring{$\ast$}{*}multi)
 \item 
-int \mbox{\hyperlink{fetcher_8c_a7c77e2145eeb16934502df9b045a0e41}{check\+\_\+response}} (CURL \texorpdfstring{$\ast$}{*}handle, char outpath\mbox{[}\mbox{\hyperlink{fetcher_8h_afcbf7727d6416354930cd43f1c1e480c}{MAX\+\_\+\+URL}}\mbox{]}, FILE \texorpdfstring{$\ast$}{*}file)
+int \mbox{\hyperlink{fetcher_8c_a7c77e2145eeb16934502df9b045a0e41}{check\+\_\+response}} (CURL \texorpdfstring{$\ast$}{*}handle, char outpath\mbox{[}\mbox{\hyperlink{constants_8h_afcbf7727d6416354930cd43f1c1e480c}{MAX\+\_\+\+URL}}\mbox{]}, FILE \texorpdfstring{$\ast$}{*}file)
 \item 
 void \mbox{\hyperlink{fetcher_8c_a2412f6b208a4be3383b4955699e31682}{set\+\_\+master}} ()
-\item 
-int \mbox{\hyperlink{fetcher_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structprogress}{progress}} \mbox{\hyperlink{fetcher_8c_a1ede12d9f404a3e1d653a6dab5342864}{progs}} \mbox{[}\mbox{\hyperlink{fetcher_8h_a7e72e0268904c2467ce256cc0f78925c}{NUM\+\_\+\+FILES}}\mbox{]}
+CURL \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{fetcher_8c_a2e0775733c760761edc48cc736ee03df}{master}} = NULL
+\item 
+struct \mbox{\hyperlink{structprogress}{progress}} \mbox{\hyperlink{fetcher_8c_a1ede12d9f404a3e1d653a6dab5342864}{progs}} \mbox{[}\mbox{\hyperlink{constants_8h_a7e72e0268904c2467ce256cc0f78925c}{NUM\+\_\+\+FILES}}\mbox{]}
 \end{DoxyCompactItemize}
 
 
@@ -60,11 +65,23 @@ const char \texorpdfstring{$\ast$}{*} construct\+\_\+file\+\_\+name (\begin{Doxy
 {\footnotesize\ttfamily \label{fetcher_8c_a97e9cf50b9689b134898578c3cffb406} 
 int download\+\_\+parallel (\begin{DoxyParamCaption}\item[{const char}]{keys}{\mbox{[}\+NUM\+\_\+\+FILES\mbox{]}\mbox{[}\+MAX\+\_\+\+URL\mbox{]}}\end{DoxyParamCaption})}
 
-\Hypertarget{fetcher_8c_a840291bc02cba5474a4cb46a9b9566fe}\index{fetcher.c@{fetcher.c}!main@{main}}
-\index{main@{main}!fetcher.c@{fetcher.c}}
-\doxysubsubsection{\texorpdfstring{main()}{main()}}
-{\footnotesize\ttfamily \label{fetcher_8c_a840291bc02cba5474a4cb46a9b9566fe} 
-int main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+\Hypertarget{fetcher_8c_a2b84ffc848eb76be4341aa18b699e059}\index{fetcher.c@{fetcher.c}!fetch\_current\_conditions@{fetch\_current\_conditions}}
+\index{fetch\_current\_conditions@{fetch\_current\_conditions}!fetcher.c@{fetcher.c}}
+\doxysubsubsection{\texorpdfstring{fetch\_current\_conditions()}{fetch\_current\_conditions()}}
+{\footnotesize\ttfamily \label{fetcher_8c_a2b84ffc848eb76be4341aa18b699e059} 
+int fetch\+\_\+current\+\_\+conditions (\begin{DoxyParamCaption}\item[{double}]{lat}{, }\item[{double}]{lon}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{out\+\_\+path}{, }\item[{size\+\_\+t}]{out\+\_\+path\+\_\+size}{}\end{DoxyParamCaption})}
+
+\Hypertarget{fetcher_8c_aef334801630cffa4f694259497e10bc3}\index{fetcher.c@{fetcher.c}!find\_latest\_run@{find\_latest\_run}}
+\index{find\_latest\_run@{find\_latest\_run}!fetcher.c@{fetcher.c}}
+\doxysubsubsection{\texorpdfstring{find\_latest\_run()}{find\_latest\_run()}}
+{\footnotesize\ttfamily \label{fetcher_8c_aef334801630cffa4f694259497e10bc3} 
+int find\+\_\+latest\+\_\+run (\begin{DoxyParamCaption}\item[{struct tm \texorpdfstring{$\ast$}{*}}]{out}{}\end{DoxyParamCaption})}
+
+\Hypertarget{fetcher_8c_a18aaef93079280c57cf858832184b302}\index{fetcher.c@{fetcher.c}!generate\_keys@{generate\_keys}}
+\index{generate\_keys@{generate\_keys}!fetcher.c@{fetcher.c}}
+\doxysubsubsection{\texorpdfstring{generate\_keys()}{generate\_keys()}}
+{\footnotesize\ttfamily \label{fetcher_8c_a18aaef93079280c57cf858832184b302} 
+void generate\+\_\+keys (\begin{DoxyParamCaption}\item[{const struct tm \texorpdfstring{$\ast$}{*}}]{run}{, }\item[{int}]{offset}{\mbox{[}\+NUM\+\_\+\+FILES\mbox{]}, }\item[{char}]{keys}{\mbox{[}\+NUM\+\_\+\+FILES\mbox{]}\mbox{[}\+MAX\+\_\+\+URL\mbox{]}}\end{DoxyParamCaption})}
 
 \Hypertarget{fetcher_8c_a54b4f6e42a7092e6568561f848b0d28c}\index{fetcher.c@{fetcher.c}!multi\_perform@{multi\_perform}}
 \index{multi\_perform@{multi\_perform}!fetcher.c@{fetcher.c}}
@@ -72,11 +89,11 @@ int main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
 {\footnotesize\ttfamily \label{fetcher_8c_a54b4f6e42a7092e6568561f848b0d28c} 
 void multi\+\_\+perform (\begin{DoxyParamCaption}\item[{CURLM \texorpdfstring{$\ast$}{*}}]{multi}{}\end{DoxyParamCaption})}
 
-\Hypertarget{fetcher_8c_a88989790257affffb02ca7cfa3517d3b}\index{fetcher.c@{fetcher.c}!redraw\_bars@{redraw\_bars}}
-\index{redraw\_bars@{redraw\_bars}!fetcher.c@{fetcher.c}}
-\doxysubsubsection{\texorpdfstring{redraw\_bars()}{redraw\_bars()}}
-{\footnotesize\ttfamily \label{fetcher_8c_a88989790257affffb02ca7cfa3517d3b} 
-void redraw\+\_\+bars (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+\Hypertarget{fetcher_8c_a370c187a72a3eb6b1f72d772bd0de4a6}\index{fetcher.c@{fetcher.c}!run\_already\_downloaded@{run\_already\_downloaded}}
+\index{run\_already\_downloaded@{run\_already\_downloaded}!fetcher.c@{fetcher.c}}
+\doxysubsubsection{\texorpdfstring{run\_already\_downloaded()}{run\_already\_downloaded()}}
+{\footnotesize\ttfamily \label{fetcher_8c_a370c187a72a3eb6b1f72d772bd0de4a6} 
+bool run\+\_\+already\+\_\+downloaded (\begin{DoxyParamCaption}\item[{struct tm \texorpdfstring{$\ast$}{*}}]{run\+\_\+tm}{}\end{DoxyParamCaption})}
 
 \Hypertarget{fetcher_8c_a2412f6b208a4be3383b4955699e31682}\index{fetcher.c@{fetcher.c}!set\_master@{set\_master}}
 \index{set\_master@{set\_master}!fetcher.c@{fetcher.c}}
@@ -87,9 +104,15 @@ void set\+\_\+master (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 
 \doxysubsection{Variable Documentation}
+\Hypertarget{fetcher_8c_a2e0775733c760761edc48cc736ee03df}\index{fetcher.c@{fetcher.c}!master@{master}}
+\index{master@{master}!fetcher.c@{fetcher.c}}
+\doxysubsubsection{\texorpdfstring{master}{master}}
+{\footnotesize\ttfamily \label{fetcher_8c_a2e0775733c760761edc48cc736ee03df} 
+CURL\texorpdfstring{$\ast$}{*} master = NULL}
+
 \Hypertarget{fetcher_8c_a1ede12d9f404a3e1d653a6dab5342864}\index{fetcher.c@{fetcher.c}!progs@{progs}}
 \index{progs@{progs}!fetcher.c@{fetcher.c}}
 \doxysubsubsection{\texorpdfstring{progs}{progs}}
 {\footnotesize\ttfamily \label{fetcher_8c_a1ede12d9f404a3e1d653a6dab5342864} 
-struct \mbox{\hyperlink{structprogress}{progress}} progs\mbox{[}\mbox{\hyperlink{fetcher_8h_a7e72e0268904c2467ce256cc0f78925c}{NUM\+\_\+\+FILES}}\mbox{]}}
+struct \mbox{\hyperlink{structprogress}{progress}} progs\mbox{[}\mbox{\hyperlink{constants_8h_a7e72e0268904c2467ce256cc0f78925c}{NUM\+\_\+\+FILES}}\mbox{]}}
 

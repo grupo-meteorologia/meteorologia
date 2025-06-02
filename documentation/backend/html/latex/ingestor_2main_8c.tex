@@ -1,0 +1,56 @@
+\doxysection{ingestor/main.c File Reference}
+\hypertarget{ingestor_2main_8c}{}\label{ingestor_2main_8c}\index{ingestor/main.c@{ingestor/main.c}}
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include $<$sqlite3.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include "{}constants.\+h"{}}\newline
+{\ttfamily \#include "{}fetcher.\+h"{}}\newline
+{\ttfamily \#include "{}parser.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{ingestor_2main_8c_aaa1000bd9a2caabb457415d063338082}{current\+\_\+data\+\_\+sql}} ()
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ingestor_2main_8c_a9690068bf4abb6cc618311e66bef9d9f}{fetcher\+\_\+thread}} (void \texorpdfstring{$\ast$}{*}\+\_\+)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ingestor_2main_8c_a441857e205e246a38f7d88d648e221fb}{parser\+\_\+thread}} (void \texorpdfstring{$\ast$}{*}\+\_\+)
+\item 
+void \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{ingestor_2main_8c_a4caa6c391db0ba4c0607636e5a65a6b8}{db\+\_\+thread}} (void \texorpdfstring{$\ast$}{*}\+\_\+)
+\item 
+int \mbox{\hyperlink{ingestor_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{ingestor_2main_8c_aaa1000bd9a2caabb457415d063338082}\index{main.c@{main.c}!current\_data\_sql@{current\_data\_sql}}
+\index{current\_data\_sql@{current\_data\_sql}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{current\_data\_sql()}{current\_data\_sql()}}
+{\footnotesize\ttfamily \label{ingestor_2main_8c_aaa1000bd9a2caabb457415d063338082} 
+int current\+\_\+data\+\_\+sql (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{ingestor_2main_8c_a4caa6c391db0ba4c0607636e5a65a6b8}\index{main.c@{main.c}!db\_thread@{db\_thread}}
+\index{db\_thread@{db\_thread}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{db\_thread()}{db\_thread()}}
+{\footnotesize\ttfamily \label{ingestor_2main_8c_a4caa6c391db0ba4c0607636e5a65a6b8} 
+void \texorpdfstring{$\ast$}{*} db\+\_\+thread (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{\+\_\+}{}\end{DoxyParamCaption})}
+
+\Hypertarget{ingestor_2main_8c_a9690068bf4abb6cc618311e66bef9d9f}\index{main.c@{main.c}!fetcher\_thread@{fetcher\_thread}}
+\index{fetcher\_thread@{fetcher\_thread}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{fetcher\_thread()}{fetcher\_thread()}}
+{\footnotesize\ttfamily \label{ingestor_2main_8c_a9690068bf4abb6cc618311e66bef9d9f} 
+void \texorpdfstring{$\ast$}{*} fetcher\+\_\+thread (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{\+\_\+}{}\end{DoxyParamCaption})}
+
+\Hypertarget{ingestor_2main_8c_a840291bc02cba5474a4cb46a9b9566fe}\index{main.c@{main.c}!main@{main}}
+\index{main@{main}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{ingestor_2main_8c_a840291bc02cba5474a4cb46a9b9566fe} 
+int main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{ingestor_2main_8c_a441857e205e246a38f7d88d648e221fb}\index{main.c@{main.c}!parser\_thread@{parser\_thread}}
+\index{parser\_thread@{parser\_thread}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{parser\_thread()}{parser\_thread()}}
+{\footnotesize\ttfamily \label{ingestor_2main_8c_a441857e205e246a38f7d88d648e221fb} 
+void \texorpdfstring{$\ast$}{*} parser\+\_\+thread (\begin{DoxyParamCaption}\item[{void \texorpdfstring{$\ast$}{*}}]{\+\_\+}{}\end{DoxyParamCaption})}
+

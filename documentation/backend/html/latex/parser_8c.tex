@@ -1,41 +1,27 @@
-\doxysection{lib\+\_\+api/parser.c File Reference}
-\hypertarget{parser_8c}{}\label{parser_8c}\index{lib\_api/parser.c@{lib\_api/parser.c}}
+\doxysection{ingestor/parser.c File Reference}
+\hypertarget{parser_8c}{}\label{parser_8c}\index{ingestor/parser.c@{ingestor/parser.c}}
+{\ttfamily \#include "{}parser.\+h"{}}\newline
+{\ttfamily \#include $<$sqlite3.\+h$>$}\newline
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
-{\ttfamily \#include $<$stdlib.\+h$>$}\newline
-{\ttfamily \#include $<$string.\+h$>$}\newline
-\doxysubsubsection*{Macros}
-\begin{DoxyCompactItemize}
-\item 
-\#define \mbox{\hyperlink{parser_8c_a4728ff1b44b0ff0d06b2758a6c2da893}{RAW\+\_\+\+DIR}}~"{}data/raw/"{}
-\item 
-\#define \mbox{\hyperlink{parser_8c_a9462efe4805ef4302a2fd001f72e4a38}{JSON\+\_\+\+DIR}}~"{}data/json"{}
-\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-FILE \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{parser_8c_ab75833efc9809aa1282abc580b862f82}{nc\+\_\+get\+\_\+subset\+\_\+as\+\_\+json}} (char \texorpdfstring{$\ast$}{*}inname, char \texorpdfstring{$\ast$}{*}outname, float lon0, float lon1, float lat0, float lat1)
+double \mbox{\hyperlink{parser_8c_a9237e1129f82bb9e422913efccaf0903}{round\+\_\+value}} (double value)
+\item 
+int \mbox{\hyperlink{parser_8c_a7acc05e668c11b94544574e5eb358727}{call\+\_\+parse\+\_\+and\+\_\+store}} (const char \texorpdfstring{$\ast$}{*}timestamp, double lat, double lon)
 \end{DoxyCompactItemize}
 
 
-\doxysubsection{Macro Definition Documentation}
-\Hypertarget{parser_8c_a9462efe4805ef4302a2fd001f72e4a38}\index{parser.c@{parser.c}!JSON\_DIR@{JSON\_DIR}}
-\index{JSON\_DIR@{JSON\_DIR}!parser.c@{parser.c}}
-\doxysubsubsection{\texorpdfstring{JSON\_DIR}{JSON\_DIR}}
-{\footnotesize\ttfamily \label{parser_8c_a9462efe4805ef4302a2fd001f72e4a38} 
-\#define JSON\+\_\+\+DIR~"{}data/json"{}}
-
-\Hypertarget{parser_8c_a4728ff1b44b0ff0d06b2758a6c2da893}\index{parser.c@{parser.c}!RAW\_DIR@{RAW\_DIR}}
-\index{RAW\_DIR@{RAW\_DIR}!parser.c@{parser.c}}
-\doxysubsubsection{\texorpdfstring{RAW\_DIR}{RAW\_DIR}}
-{\footnotesize\ttfamily \label{parser_8c_a4728ff1b44b0ff0d06b2758a6c2da893} 
-\#define RAW\+\_\+\+DIR~"{}data/raw/"{}}
-
-
-
 \doxysubsection{Function Documentation}
-\Hypertarget{parser_8c_ab75833efc9809aa1282abc580b862f82}\index{parser.c@{parser.c}!nc\_get\_subset\_as\_json@{nc\_get\_subset\_as\_json}}
-\index{nc\_get\_subset\_as\_json@{nc\_get\_subset\_as\_json}!parser.c@{parser.c}}
-\doxysubsubsection{\texorpdfstring{nc\_get\_subset\_as\_json()}{nc\_get\_subset\_as\_json()}}
-{\footnotesize\ttfamily \label{parser_8c_ab75833efc9809aa1282abc580b862f82} 
-FILE \texorpdfstring{$\ast$}{*} nc\+\_\+get\+\_\+subset\+\_\+as\+\_\+json (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{inname}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{outname}{, }\item[{float}]{lon0}{, }\item[{float}]{lon1}{, }\item[{float}]{lat0}{, }\item[{float}]{lat1}{}\end{DoxyParamCaption})}
+\Hypertarget{parser_8c_a7acc05e668c11b94544574e5eb358727}\index{parser.c@{parser.c}!call\_parse\_and\_store@{call\_parse\_and\_store}}
+\index{call\_parse\_and\_store@{call\_parse\_and\_store}!parser.c@{parser.c}}
+\doxysubsubsection{\texorpdfstring{call\_parse\_and\_store()}{call\_parse\_and\_store()}}
+{\footnotesize\ttfamily \label{parser_8c_a7acc05e668c11b94544574e5eb358727} 
+int call\+\_\+parse\+\_\+and\+\_\+store (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}{*}}]{timestamp}{, }\item[{double}]{lat}{, }\item[{double}]{lon}{}\end{DoxyParamCaption})}
+
+\Hypertarget{parser_8c_a9237e1129f82bb9e422913efccaf0903}\index{parser.c@{parser.c}!round\_value@{round\_value}}
+\index{round\_value@{round\_value}!parser.c@{parser.c}}
+\doxysubsubsection{\texorpdfstring{round\_value()}{round\_value()}}
+{\footnotesize\ttfamily \label{parser_8c_a9237e1129f82bb9e422913efccaf0903} 
+double round\+\_\+value (\begin{DoxyParamCaption}\item[{double}]{value}{}\end{DoxyParamCaption})}
 

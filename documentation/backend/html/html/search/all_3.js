@@ -1,4 +1,27 @@
 var searchData=
 [
-  ['idx_0',['idx',['../structcbdata.html#a821b31ccf5ccbbac335ee745585320b5',1,'cbdata']]]
+  ['c_0',['c',['../structdns__data.html#a18a827d42ed4492cf3614e9376785e4a',1,'dns_data::c'],['../structprintdirentrydata.html#abf281ab03c387316f699aa6dba6a8e49',1,'printdirentrydata::c'],['../unionchar64long16.html#a7067dbe3b0ff3f11661acb8cd97bcff9',1,'char64long16::c'],['../structmg__dns.html#a84836b40dcab307651d022d1e546cdb7',1,'mg_dns::c']]],
+  ['c_5fget_5fforecast_1',['c_get_forecast',['../main_8h.html#a4e7ea857075a29880e10d01dde3b8fc0',1,'main.h']]],
+  ['c_5fget_5fweather_5fdata_2',['c_get_weather_data',['../server_2main_8c.html#a6ae3f182598e8a56f7f75a03667f49da',1,'c_get_weather_data(double lat, double lon):&#160;main.c'],['../main_8h.html#a6ae3f182598e8a56f7f75a03667f49da',1,'c_get_weather_data(double lat, double lon):&#160;main.c']]],
+  ['c_5fget_5fweather_5fvar_3',['c_get_weather_var',['../server_2main_8c.html#a19ecd47a8f130f9cca2626da0fef4c52',1,'c_get_weather_var(double lat, double lon, char *var):&#160;main.c'],['../main_8h.html#a19ecd47a8f130f9cca2626da0fef4c52',1,'c_get_weather_var(double lat, double lon, char *var):&#160;main.c']]],
+  ['ca_4',['ca',['../structmg__tls__opts.html#a6896c9b48d0a3ae20a5957c1669d83f0',1,'mg_tls_opts']]],
+  ['call_5fparse_5fand_5fstore_5',['call_parse_and_store',['../parser_8c.html#a7acc05e668c11b94544574e5eb358727',1,'call_parse_and_store(const char *timestamp, double lat, double lon):&#160;parser.c'],['../parser_8h.html#a7acc05e668c11b94544574e5eb358727',1,'call_parse_and_store(const char *timestamp, double lat, double lon):&#160;parser.c']]],
+  ['cbdata_6',['cbdata',['../structcbdata.html',1,'']]],
+  ['cert_7',['cert',['../structmg__tls__opts.html#acfd69f627634d55d0aaefb968eb94bfe',1,'mg_tls_opts']]],
+  ['ch_8',['ch',['../mongoose_8c.html#a19ff9e8264567df11d6d130afa745c93',1,'mongoose.c']]],
+  ['channel_9',['channel',['../structmg__wifi__scan__bss__data.html#a0a51655a05fda4bf9f1e912edbd1069d',1,'mg_wifi_scan_bss_data']]],
+  ['char64long16_10',['char64long16',['../unionchar64long16.html',1,'']]],
+  ['check_5fresponse_11',['check_response',['../fetcher_8c.html#a7c77e2145eeb16934502df9b045a0e41',1,'check_response(CURL *handle, char outpath[MAX_URL], FILE *file):&#160;fetcher.c'],['../fetcher_8h.html#a7c77e2145eeb16934502df9b045a0e41',1,'check_response(CURL *handle, char outpath[MAX_URL], FILE *file):&#160;fetcher.c']]],
+  ['check_5ftime_12',['check_time',['../fetcher_8c.html#a18bb0829e0e1490bce60cd20fb77d87f',1,'check_time(FILE **file, char outpath[MAX_URL]):&#160;fetcher.c'],['../fetcher_8h.html#a18bb0829e0e1490bce60cd20fb77d87f',1,'check_time(FILE **file, char outpath[MAX_URL]):&#160;fetcher.c']]],
+  ['cl_13',['cl',['../structmg__fs.html#ad201829b0e7912e55701f6d11ac75f13',1,'mg_fs']]],
+  ['clean_14',['clean',['../structmg__mqtt__opts.html#a143b2f368b6281b541a49912345ec4c6',1,'mg_mqtt_opts']]],
+  ['client_5fid_15',['client_id',['../structmg__mqtt__opts.html#a99c65bbbe9592b1bac38f7b026ff97c0',1,'mg_mqtt_opts']]],
+  ['closesocket_16',['closesocket',['../mongoose_8c.html#aa14fa587d16f7b336fc999be98588f04',1,'mongoose.c']]],
+  ['cmd_17',['cmd',['../structmg__mqtt__message.html#ad6579f625992c0ca6b0a2381ca301971',1,'mg_mqtt_message']]],
+  ['cmpresult_5ft_18',['cmpresult_t',['../mongoose_8h.html#a6fe5a9f28375a016c203ced5e9282ae2',1,'mongoose.h']]],
+  ['conns_19',['conns',['../structmg__mgr.html#aea4abe9c820acf0e0bbb54593cf3244b',1,'mg_mgr']]],
+  ['constants_2eh_20',['constants.h',['../constants_8h.html',1,'']]],
+  ['construct_5ffile_5fname_21',['construct_file_name',['../fetcher_8c.html#a4cac288e7acfe1728d2fcfeb4a16dbb6',1,'construct_file_name(const char *key, char url[MAX_URL], char outpath[MAX_URL]):&#160;fetcher.c'],['../fetcher_8h.html#a4cac288e7acfe1728d2fcfeb4a16dbb6',1,'construct_file_name(const char *key, char url[MAX_URL], char outpath[MAX_URL]):&#160;fetcher.c']]],
+  ['count_22',['count',['../structmg__sha1__ctx.html#af4593814cbbb9ab126a2d0456e04a08d',1,'mg_sha1_ctx']]],
+  ['current_5fdata_5fsql_23',['current_data_sql',['../ingestor_2main_8c.html#aaa1000bd9a2caabb457415d063338082',1,'main.c']]]
 ];
