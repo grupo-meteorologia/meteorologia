@@ -1,0 +1,31 @@
+<map id="ingestor/fetcher.h" name="ingestor/fetcher.h">
+<area shape="rect" id="Node000001" title="Ubicamos y descargamos archivos de AWS y open&#45;meteo." alt="" coords="645,5,766,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,79,83,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="645,26,409,44,256,60,98,81,98,76,256,54,408,38,644,20"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="106,79,190,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="644,27,453,47,205,81,205,76,452,42,644,22"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="214,79,298,105"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="645,30,498,51,314,81,313,76,497,46,644,25"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="323,79,421,105"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="649,34,437,79,436,74,648,29"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="446,79,506,105"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="667,34,522,79,520,74,666,29"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="530,79,603,105"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="683,34,605,74,603,69,681,29"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="628,79,695,105"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="700,33,679,67,675,64,696,30"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="720,79,779,105"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="715,30,736,64,732,67,710,33"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="804,79,866,105"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="729,29,801,69,798,73,726,34"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="890,79,953,105"/>
+<area shape="poly" id="edge10_Node000001_Node000011" title=" " alt="" coords="743,29,876,73,874,78,741,34"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="977,79,1055,105"/>
+<area shape="poly" id="edge11_Node000001_Node000012" title=" " alt="" coords="759,29,963,76,961,81,758,34"/>
+<area shape="rect" id="Node000013" title=" " alt="" coords="1078,79,1135,105"/>
+<area shape="poly" id="edge12_Node000001_Node000013" title=" " alt="" coords="767,25,899,45,1063,76,1062,81,898,50,766,30"/>
+<area shape="rect" id="Node000014" title=" " alt="" coords="1159,79,1225,105"/>
+<area shape="poly" id="edge13_Node000001_Node000014" title=" " alt="" coords="767,23,933,43,1144,76,1143,81,932,48,766,28"/>
+<area shape="rect" id="Node000015" href="$constants_8h.html" title="Determinamos una serie de constantes para el ingestor." alt="" coords="1249,79,1338,105"/>
+<area shape="poly" id="edge14_Node000001_Node000015" title=" " alt="" coords="767,22,970,42,1234,76,1234,81,970,47,766,27"/>
+</map>

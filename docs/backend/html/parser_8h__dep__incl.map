@@ -1,0 +1,5 @@
+<map id="ingestor/parser.h" name="ingestor/parser.h">
+<area shape="rect" id="Node000001" title="Procesamos y poblamos la base de datos." alt="" coords="5,5,123,31"/>
+<area shape="rect" id="Node000002" href="$ingestor_2main_8c.html" title="Extraemos los archivos del internet y los guardamos en la DB. Los datos sobre el clima siempre son en..." alt="" coords="9,79,119,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="67,46,67,79,61,79,61,46"/>
+</map>
