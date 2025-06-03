@@ -134,11 +134,11 @@ Functions</h2></td></tr>
 <tr class="separator:aef334801630cffa4f694259497e10bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18aaef93079280c57cf858832184b302" id="r_a18aaef93079280c57cf858832184b302"><td class="memItemLeft" align="right" valign="top"><a id="a18aaef93079280c57cf858832184b302" name="a18aaef93079280c57cf858832184b302"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>generate_keys</b> (const struct tm *run, int offset[<a class="el" href="constants_8h.html#a7e72e0268904c2467ce256cc0f78925c">NUM_FILES</a>], char keys[<a class="el" href="constants_8h.html#a7e72e0268904c2467ce256cc0f78925c">NUM_FILES</a>][<a class="el" href="constants_8h.html#afcbf7727d6416354930cd43f1c1e480c">MAX_URL</a>])</td></tr>
-<tr class="memdesc:a18aaef93079280c57cf858832184b302"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función que, utilizando find_latest_run, produce llaves válidas para AWS. <br /></td></tr>
+<tr class="memdesc:a18aaef93079280c57cf858832184b302"><td class="mdescLeft">&#160;</td><td class="mdescRight">\Función que, utilizando find_latest_run, produce llaves válidas para AWS. <br /></td></tr>
 <tr class="separator:a18aaef93079280c57cf858832184b302"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b84ffc848eb76be4341aa18b699e059" id="r_a2b84ffc848eb76be4341aa18b699e059"><td class="memItemLeft" align="right" valign="top"><a id="a2b84ffc848eb76be4341aa18b699e059" name="a2b84ffc848eb76be4341aa18b699e059"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>fetch_current_conditions</b> (double lat, double lon, char *out_path, size_t out_path_size)</td></tr>
-<tr class="memdesc:a2b84ffc848eb76be4341aa18b699e059"><td class="mdescLeft">&#160;</td><td class="mdescRight">Función que busca la información desde open-meteo. <br /></td></tr>
+<tr class="memdesc:a2b84ffc848eb76be4341aa18b699e059"><td class="mdescLeft">&#160;</td><td class="mdescRight">\Función que busca la información desde open-meteo. <br /></td></tr>
 <tr class="separator:a2b84ffc848eb76be4341aa18b699e059"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97e9cf50b9689b134898578c3cffb406" id="r_a97e9cf50b9689b134898578c3cffb406"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97e9cf50b9689b134898578c3cffb406">download_parallel</a> (const char keys[<a class="el" href="constants_8h.html#a7e72e0268904c2467ce256cc0f78925c">NUM_FILES</a>][<a class="el" href="constants_8h.html#afcbf7727d6416354930cd43f1c1e480c">MAX_URL</a>])</td></tr>
 <tr class="separator:a97e9cf50b9689b134898578c3cffb406"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,28 +146,28 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>fetch_current_conditio
 <tr class="separator:a54b4f6e42a7092e6568561f848b0d28c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c77e2145eeb16934502df9b045a0e41" id="r_a7c77e2145eeb16934502df9b045a0e41"><td class="memItemLeft" align="right" valign="top"><a id="a7c77e2145eeb16934502df9b045a0e41" name="a7c77e2145eeb16934502df9b045a0e41"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>check_response</b> (CURL *handle, char outpath[<a class="el" href="constants_8h.html#afcbf7727d6416354930cd43f1c1e480c">MAX_URL</a>], FILE *file)</td></tr>
-<tr class="memdesc:a7c77e2145eeb16934502df9b045a0e41"><td class="mdescLeft">&#160;</td><td class="mdescRight">NO USEN ESTO. Tiene un uso muy concreto en download_parallel. <br /></td></tr>
+<tr class="memdesc:a7c77e2145eeb16934502df9b045a0e41"><td class="mdescLeft">&#160;</td><td class="mdescRight">\NO USEN ESTO. Tiene un uso muy concreto en download_parallel. <br /></td></tr>
 <tr class="separator:a7c77e2145eeb16934502df9b045a0e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4cac288e7acfe1728d2fcfeb4a16dbb6" id="r_a4cac288e7acfe1728d2fcfeb4a16dbb6"><td class="memItemLeft" align="right" valign="top"><a id="a4cac288e7acfe1728d2fcfeb4a16dbb6" name="a4cac288e7acfe1728d2fcfeb4a16dbb6"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>construct_file_name</b> (const char *key, char url[<a class="el" href="constants_8h.html#afcbf7727d6416354930cd43f1c1e480c">MAX_URL</a>], char outpath[<a class="el" href="constants_8h.html#afcbf7727d6416354930cd43f1c1e480c">MAX_URL</a>])</td></tr>
-<tr class="memdesc:a4cac288e7acfe1728d2fcfeb4a16dbb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pone el archivo descargado en /data/netcdf/. <br /></td></tr>
+<tr class="memdesc:a4cac288e7acfe1728d2fcfeb4a16dbb6"><td class="mdescLeft">&#160;</td><td class="mdescRight">\Pone el archivo descargado en /data/netcdf/ <br /></td></tr>
 <tr class="separator:a4cac288e7acfe1728d2fcfeb4a16dbb6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18bb0829e0e1490bce60cd20fb77d87f" id="r_a18bb0829e0e1490bce60cd20fb77d87f"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18bb0829e0e1490bce60cd20fb77d87f">check_time</a> (FILE **file, char outpath[<a class="el" href="constants_8h.html#afcbf7727d6416354930cd43f1c1e480c">MAX_URL</a>])</td></tr>
 <tr class="separator:a18bb0829e0e1490bce60cd20fb77d87f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a370c187a72a3eb6b1f72d772bd0de4a6" id="r_a370c187a72a3eb6b1f72d772bd0de4a6"><td class="memItemLeft" align="right" valign="top"><a id="a370c187a72a3eb6b1f72d772bd0de4a6" name="a370c187a72a3eb6b1f72d772bd0de4a6"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>run_already_downloaded</b> (struct tm *run_tm)</td></tr>
-<tr class="memdesc:a370c187a72a3eb6b1f72d772bd0de4a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determina si un archivo .nc fue descargado anteriormente o no. <br /></td></tr>
+<tr class="memdesc:a370c187a72a3eb6b1f72d772bd0de4a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">\Determina si un archivo .nc fue descargado anteriormente o no. <br /></td></tr>
 <tr class="separator:a370c187a72a3eb6b1f72d772bd0de4a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2412f6b208a4be3383b4955699e31682" id="r_a2412f6b208a4be3383b4955699e31682"><td class="memItemLeft" align="right" valign="top"><a id="a2412f6b208a4be3383b4955699e31682" name="a2412f6b208a4be3383b4955699e31682"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>set_master</b> ()</td></tr>
-<tr class="memdesc:a2412f6b208a4be3383b4955699e31682"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configura variables de master de vuelta al predeterminado. <br /></td></tr>
+<tr class="memdesc:a2412f6b208a4be3383b4955699e31682"><td class="mdescLeft">&#160;</td><td class="mdescRight">\Configura variables de master de vuelta al predeterminado. <br /></td></tr>
 <tr class="separator:a2412f6b208a4be3383b4955699e31682"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
 <tr class="memitem:a2e0775733c760761edc48cc736ee03df" id="r_a2e0775733c760761edc48cc736ee03df"><td class="memItemLeft" align="right" valign="top"><a id="a2e0775733c760761edc48cc736ee03df" name="a2e0775733c760761edc48cc736ee03df"></a>
 CURL *&#160;</td><td class="memItemRight" valign="bottom"><b>master</b></td></tr>
-<tr class="memdesc:a2e0775733c760761edc48cc736ee03df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Puntero a la instancia global de CURL, definida en fetcher.c. <br /></td></tr>
+<tr class="memdesc:a2e0775733c760761edc48cc736ee03df"><td class="mdescLeft">&#160;</td><td class="mdescRight">\Puntero a la instancia global de CURL, definida en fetcher.c <br /></td></tr>
 <tr class="separator:a2e0775733c760761edc48cc736ee03df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -191,7 +191,7 @@ CURL *&#160;</td><td class="memItemRight" valign="bottom"><b>master</b></td></tr
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Bien simple de entender. Observa un url y determina compara el tiempo con un archivo. </p>
+<p>\Bien simple de entender. Observa un url y determina compara el tiempo con un \archivo. </p>
 
 </div>
 </div>
@@ -209,7 +209,7 @@ CURL *&#160;</td><td class="memItemRight" valign="bottom"><b>master</b></td></tr
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Función que, dadas las llaves de AWS, abre una cierta cantidad de hilos y descarga los archivos en paralelo. </p>
+<p>\Función que, dadas las llaves de AWS, abre una cierta cantidad de hilos y \descarga los archivos en paralelo. </p>
 
 </div>
 </div>
@@ -227,7 +227,7 @@ CURL *&#160;</td><td class="memItemRight" valign="bottom"><b>master</b></td></tr
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Función para devolver los últimos 3 archivos .nc del servicio meteorológico nacional guardados en AWS. Devuelve 1 si es incapaz de ejecutar las instrucciones o si no hay una run válida en las últimas 24 horas. </p>
+<p>\Función para devolver los últimos 3 archivos .nc del servicio meteorológico \nacional guardados en AWS. Devuelve 1 si es incapaz de ejecutar las \instrucciones o si no hay una run válida en las últimas 24 horas. </p>
 
 </div>
 </div>
@@ -245,7 +245,7 @@ CURL *&#160;</td><td class="memItemRight" valign="bottom"><b>master</b></td></tr
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Función de apoyo para que la thread desde la que se lanza download_parallel espere a que esta se complete. Es llamada desde dentro de download_parallel unicamente. </p>
+<p>\Función de apoyo para que la thread desde la que se lanza download_parallel \espere a que esta se complete. Es llamada desde dentro de download_parallel \unicamente. </p>
 
 </div>
 </div>
