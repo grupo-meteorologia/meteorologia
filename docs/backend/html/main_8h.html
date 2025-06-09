@@ -111,7 +111,8 @@ $(function(){initNavTree('main_8h.html',''); initResizable(true); });
 
 <p>Presentamos el API de C para devolver los datos. Los datos sobre el clima siempre son en grados celsius \ image html server_api.png.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;sqlite3.h&gt;</code><br />
+<div class="textblock"><code>#include &lt;cjson/cJSON.h&gt;</code><br />
+<code>#include &lt;sqlite3.h&gt;</code><br />
 <code>#include &lt;stdio.h&gt;</code><br />
 <code>#include &lt;stdlib.h&gt;</code><br />
 <code>#include &lt;string.h&gt;</code><br />
@@ -121,17 +122,19 @@ Include dependency graph for main.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="main_8h__incl.png" border="0" usemap="#aserver_2main_8h" alt=""/></div>
 <map name="aserver_2main_8h" id="aserver_2main_8h">
-<area shape="rect" title="Presentamos el API de C para devolver los datos. Los datos sobre el clima siempre son en grados celsi..." alt="" coords="164,5,263,31"/>
-<area shape="rect" title=" " alt="" coords="5,79,75,105"/>
-<area shape="poly" title=" " alt="" coords="185,34,85,75,83,70,183,29"/>
-<area shape="rect" title=" " alt="" coords="98,79,158,105"/>
-<area shape="poly" title=" " alt="" coords="201,34,155,71,152,67,197,29"/>
-<area shape="rect" title=" " alt="" coords="182,79,244,105"/>
-<area shape="poly" title=" " alt="" coords="216,31,216,63,211,63,211,31"/>
-<area shape="rect" title=" " alt="" coords="268,79,332,105"/>
-<area shape="poly" title=" " alt="" coords="230,29,276,67,272,71,226,34"/>
-<area shape="rect" title=" " alt="" coords="356,79,447,105"/>
-<area shape="poly" title=" " alt="" coords="246,29,356,70,354,75,244,34"/>
+<area shape="rect" title="Presentamos el API de C para devolver los datos. Los datos sobre el clima siempre son en grados celsi..." alt="" coords="254,5,354,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,115,105"/>
+<area shape="poly" title=" " alt="" coords="263,34,117,77,115,72,262,29"/>
+<area shape="rect" title=" " alt="" coords="139,79,208,105"/>
+<area shape="poly" title=" " alt="" coords="283,34,210,74,207,69,281,29"/>
+<area shape="rect" title=" " alt="" coords="232,79,291,105"/>
+<area shape="poly" title=" " alt="" coords="299,33,279,67,274,64,295,30"/>
+<area shape="rect" title=" " alt="" coords="316,79,378,105"/>
+<area shape="poly" title=" " alt="" coords="313,30,334,64,329,67,309,33"/>
+<area shape="rect" title=" " alt="" coords="402,79,465,105"/>
+<area shape="poly" title=" " alt="" coords="327,29,399,69,397,73,325,34"/>
+<area shape="rect" title=" " alt="" coords="489,79,580,105"/>
+<area shape="poly" title=" " alt="" coords="344,29,482,71,480,77,342,34"/>
 </map>
 </div>
 </div>
@@ -147,6 +150,12 @@ Macros</h2></td></tr>
 #define&#160;</td><td class="memItemRight" valign="bottom"><b>DB_PATH</b>&#160;&#160;&#160;&quot;/data/dev.db&quot;</td></tr>
 <tr class="memdesc:a0670e0e3546fcd815d007fe1aeff321e"><td class="mdescLeft">&#160;</td><td class="mdescRight">\ Dirección de la base de datos dentro del entorno de Docker. <br /></td></tr>
 <tr class="separator:a0670e0e3546fcd815d007fe1aeff321e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6cb3d03763e9199c121d36eb854f80b3" id="r_a6cb3d03763e9199c121d36eb854f80b3"><td class="memItemLeft" align="right" valign="top"><a id="a6cb3d03763e9199c121d36eb854f80b3" name="a6cb3d03763e9199c121d36eb854f80b3"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>RETRY_DELAY</b>&#160;&#160;&#160;10</td></tr>
+<tr class="separator:a6cb3d03763e9199c121d36eb854f80b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4de35992fdc944adfe29fa05f63dfa31" id="r_a4de35992fdc944adfe29fa05f63dfa31"><td class="memItemLeft" align="right" valign="top"><a id="a4de35992fdc944adfe29fa05f63dfa31" name="a4de35992fdc944adfe29fa05f63dfa31"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>KEYS_JSON</b>&#160;&#160;&#160;&quot;/data/var_specs.json&quot;</td></tr>
+<tr class="separator:a4de35992fdc944adfe29fa05f63dfa31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -154,6 +163,9 @@ Functions</h2></td></tr>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>c_get_weather_data</b> (double lat, double lon, int *code)</td></tr>
 <tr class="memdesc:a61ec9e2877853007eb20d47ab707871a"><td class="mdescLeft">&#160;</td><td class="mdescRight">\ Datos del clima en paquete. <br /></td></tr>
 <tr class="separator:a61ec9e2877853007eb20d47ab707871a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a302149c840d81dd3fc63d5dab66f99a6" id="r_a302149c840d81dd3fc63d5dab66f99a6"><td class="memItemLeft" align="right" valign="top"><a id="a302149c840d81dd3fc63d5dab66f99a6" name="a302149c840d81dd3fc63d5dab66f99a6"></a>
+char **&#160;</td><td class="memItemRight" valign="bottom"><b>build_keys</b> (int *out_n)</td></tr>
+<tr class="separator:a302149c840d81dd3fc63d5dab66f99a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c4d63e48e69d69a2a21ca9abe08e68f" id="r_a4c4d63e48e69d69a2a21ca9abe08e68f"><td class="memItemLeft" align="right" valign="top"><a id="a4c4d63e48e69d69a2a21ca9abe08e68f" name="a4c4d63e48e69d69a2a21ca9abe08e68f"></a>
 const char *&#160;</td><td class="memItemRight" valign="bottom"><b>c_get_weather_var</b> (double lat, double lon, char *var, int *code)</td></tr>
 <tr class="memdesc:a4c4d63e48e69d69a2a21ca9abe08e68f"><td class="mdescLeft">&#160;</td><td class="mdescRight">\ Datos del clima por variable. <br /></td></tr>
